@@ -1,0 +1,22 @@
+{
+  "dependencies": {
+    "@emotion/react": "^11.5.0",
+    "@emotion/styled": "^11.5.0",
+    "@material-ui/core": "^4.11.4",
+    "@monaco-editor/react": "^4.6.0",
+    "@mui/material": "^5.1.0",
+    "axios": "^1.6.8",
+    "codemirror": "^6.0.1",
+    "quill": "^2.0.0-rc.4",
+    "react": "^17.0.0",
+    "react-cookie": "^7.1.0",
+    "react-dom": "^17.0.0",
+    "react-hot-toast": "^2.4.1",
+    "react-nice-avatar": "^1.5.0",
+    "react-router-dom": "^6.0.0",
+    "react-toast": "^1.0.3",
+    "theme-ui": "^0.8.0",
+    "universal-cookie": "^7.1.0",
+    "yarn": "^1.22.22"
+  }
+}
