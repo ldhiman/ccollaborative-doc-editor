@@ -18,7 +18,7 @@ const app = express();
 app.use(
   cors({
     credentials: true,
-    origin: process.env.BASE_URL,
+    origin: "https://ccollaborative-doc-editor.vercel.app",
   })
 );
 
