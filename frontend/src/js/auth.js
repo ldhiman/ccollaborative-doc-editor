@@ -3,7 +3,7 @@ import axios from "axios";
 const authenticateUser = () => {
   return new Promise((resolve, reject) => {
     axios
-      .post("https://ccollaborative-doc-editor-api.vercel.app//", {}, { withCredentials: true })
+      .post("https://ccollaborative-doc-editor-api.vercel.app/", {}, { withCredentials: true })
       .then((response) => {
         if (response.statusText !== "OK") {
           reject(new Error("Failed to authenticate user"));
@@ -24,7 +24,7 @@ const resetPassword = (email) => {
   const postData = { email: email };
   return new Promise((resolve, reject) => {
     axios
-      .post("https://ccollaborative-doc-editor-api.vercel.app//auth/requestPasswordReset", postData, {
+      .post("https://ccollaborative-doc-editor-api.vercel.app/auth/requestPasswordReset", postData, {
         withCredentials: true,
       })
       .then((response) => {
@@ -50,7 +50,7 @@ const handleRegister = (email, password) => {
 
   return new Promise((resolve, reject) => {
     axios
-      .post("https://ccollaborative-doc-editor-api.vercel.app//auth/register", postData, {
+      .post("https://ccollaborative-doc-editor-api.vercel.app/auth/register", postData, {
         withCredentials: true,
       })
       .then((response) => {
@@ -75,7 +75,7 @@ const handleLogin = (email, password) => {
   const postData = { email: email, password: password };
   return new Promise((resolve, reject) => {
     axios
-      .post("https://ccollaborative-doc-editor-api.vercel.app//auth/login", postData, {
+      .post("https://ccollaborative-doc-editor-api.vercel.app/auth/login", postData, {
         withCredentials: true,
       })
       .then((response) => {
@@ -98,7 +98,7 @@ const handleLogin = (email, password) => {
 const manageUser = () => {
   return new Promise((resolve, reject) => {
     axios
-      .get("https://ccollaborative-doc-editor-api.vercel.app//auth/profile", {
+      .get("https://ccollaborative-doc-editor-api.vercel.app/auth/profile", {
         withCredentials: true,
       })
       .then((response) => {
@@ -120,7 +120,7 @@ const manageUser = () => {
 const updateUser = (data) => {
   return new Promise((resolve, reject) => {
     axios
-      .post("https://ccollaborative-doc-editor-api.vercel.app//auth/profile", data, {
+      .post("https://ccollaborative-doc-editor-api.vercel.app/auth/profile", data, {
         withCredentials: true,
       })
       .then((response) => {
@@ -143,7 +143,7 @@ const updateUser = (data) => {
 const Logout = () => {
   return new Promise((resolve, reject) => {
     axios
-      .post("https://ccollaborative-doc-editor-api.vercel.app//auth/logout", {
+      .post("https://ccollaborative-doc-editor-api.vercel.app/auth/logout", {
         withCredentials: true,
       })
       .then((response) => {
@@ -167,7 +167,7 @@ const setActiveDoc = (documentId) => {
   return new Promise((resolve, reject) => {
     axios
       .post(
-        "https://ccollaborative-doc-editor-api.vercel.app//auth/setActiveDoc",
+        "https://ccollaborative-doc-editor-api.vercel.app/auth/setActiveDoc",
         { documentId },
         { withCredentials: true }
       )
@@ -185,7 +185,7 @@ const removeActiveDoc = (documentId) => {
   return new Promise((resolve, reject) => {
     axios
       .post(
-        "https://ccollaborative-doc-editor-api.vercel.app//auth/removeActiveDoc",
+        "https://ccollaborative-doc-editor-api.vercel.app/auth/removeActiveDoc",
         { documentId },
         { withCredentials: true }
       )
