@@ -19,7 +19,8 @@
     "react-router-dom": "^6.0.0",
     "react-toast": "^1.0.3",
     "theme-ui": "^0.8.0",
-    "universal-cookie": "^7.1.0"
+    "universal-cookie": "^7.1.0",
+    "socket.io-client": "^4.4.1"
   },
   "scripts": {
     "start": "react-scripts start",
