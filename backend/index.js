@@ -23,6 +23,7 @@ app.use(
 );
 
 console.log(process.env.BASE_URL);
+console.log(process.env.DATABASE_URL);
 
 app.use(cookieParser());
 app.use(express.json());
