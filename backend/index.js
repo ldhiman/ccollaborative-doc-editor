@@ -34,7 +34,7 @@ app.listen(PORT, () => {
 });
 
 mongoose
-  .connect(`${process.env.DATABASE_URL}`, { dbName: "auth" })
+  .connect(`mongodb+srv://ldhiman597:FGTyeCs4DdE2kXxu@cluster0.vlsezux.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`, { dbName: "auth" })
   .then(() => {
     console.log("Connected to MongoDB");
     const server = http.createServer(app);
