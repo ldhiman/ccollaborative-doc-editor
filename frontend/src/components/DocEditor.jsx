@@ -56,7 +56,7 @@ function DocEditor() {
     if (Object.keys(user).length === 0) {
       return;
     }
-    socketRef.current = socketIOClient("http://localhost:3002");
+    socketRef.current = socketIOClient("https://ccollaborative-doc-editor-api.vercel.app");
 
     socketRef.current.on("connect", function () {
       const username = user.email.split("@")[0];
