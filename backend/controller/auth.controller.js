@@ -21,7 +21,7 @@ async function sendPasswordResetEmail(email, resetToken) {
     from: process.env.EMAIL,
     to: email,
     subject: "Password Reset",
-    text: `Click the following link to reset your password: http://localhost:3000/reset-password/${resetToken}`,
+    text: `Click the following link to reset your password: ${process.env.BASE_URL}/reset-password/${resetToken}`,
   };
 
   await transporter.sendMail(mailOptions);
@@ -270,9 +270,6 @@ const resetPassword = async (req, res, next) => {
       user.updatePassword(newPassword);
       user.clearResetToken();
       await user.save();
-
-      const user1 = await User.findOne({ password: hashedPassword });
-      console.log(user1);
 
       res.status(200).json({ message: "Password reset successfully" });
     } else {
