@@ -4,7 +4,7 @@ const getDocs = () => {
   return new Promise((resolve, reject) => {
     axios
       .post(
-        "http://localhost:3000/document/findById",
+        "https://ccollaborative-doc-editor-api.vercel.app/document/findById",
         {},
         { withCredentials: true }
       )
@@ -28,7 +28,7 @@ const getCollabDocs = () => {
   return new Promise((resolve, reject) => {
     axios
       .post(
-        "http://localhost:3000/document/findByCollabId",
+        "https://ccollaborative-doc-editor-api.vercel.app/document/findByCollabId",
         {},
         { withCredentials: true }
       )
@@ -66,7 +66,7 @@ const createDocument = (filename) => {
   return new Promise((resolve, reject) => {
     axios
       .post(
-        "http://localhost:3000/document/create",
+        "https://ccollaborative-doc-editor-api.vercel.app/document/create",
         { title: filename },
         { withCredentials: true }
       )
@@ -87,7 +87,7 @@ const getDocByID = (id) => {
   return new Promise((resolve, reject) => {
     axios
       .post(
-        `http://localhost:3000/document/getDoc`,
+        `https://ccollaborative-doc-editor-api.vercel.app/document/getDoc`,
         { id: id },
         { withCredentials: true }
       )
@@ -109,7 +109,7 @@ const getActiveMember = (fileId) => {
   return new Promise((resolve, reject) => {
     axios
       .post(
-        `http://localhost:3000/document/getActiveMember`,
+        `https://ccollaborative-doc-editor-api.vercel.app/document/getActiveMember`,
         { fileId },
         { withCredentials: true }
       )
@@ -130,7 +130,7 @@ const deleteDocument = (id) => {
   return new Promise((resolve, reject) => {
     axios
       .post(
-        "http://localhost:3000/document/delete",
+        "https://ccollaborative-doc-editor-api.vercel.app/document/delete",
         { id: id },
         { withCredentials: true }
       )
@@ -151,7 +151,7 @@ const sendCollabRequest = (userEmail, fileId) => {
   return new Promise((resolve, reject) => {
     axios
       .post(
-        "http://localhost:3000/document/collabRequest",
+        "https://ccollaborative-doc-editor-api.vercel.app/document/collabRequest",
         { userEmail: userEmail, fileId: fileId },
         { withCredentials: true }
       )
@@ -173,7 +173,7 @@ const acceptCollabRequest = (token) => {
   return new Promise((resolve, reject) => {
     axios
       .post(
-        "http://localhost:3000/document/addCollab",
+        "https://ccollaborative-doc-editor-api.vercel.app/document/addCollab",
         { fileId: token },
         { withCredentials: true }
       )
@@ -195,7 +195,7 @@ const updateDoc = (id, title, content) => {
   return new Promise((resolve, reject) => {
     axios
       .post(
-        "http://localhost:3000/document/update",
+        "https://ccollaborative-doc-editor-api.vercel.app/document/update",
         { id, title, content },
         { withCredentials: true }
       )
