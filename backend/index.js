@@ -11,8 +11,6 @@ const docRouter = require("./routes/document.routes.js");
 const { Verify, VerifyRole } = require("./auth/verify.js");
 const { updateUser, findUserById } = require("./auth/user.js");
 const Document = require("./models/Document.js");
-const dotenv = require("dotenv");
-dotenv.config();
 const app = express();
 
 app.use(
