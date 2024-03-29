@@ -1,0 +1,226 @@
+* {
+  box-sizing: border-box;
+}
+
+.container-home {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  flex-direction: column;
+  padding: 5px 30px;
+}
+
+.navbar-home {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 2px 10px;
+  justify-content: space-between;
+}
+
+.navbar-home .logo {
+  height: 60px;
+  width: 60px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.navbar-home .search {
+  background: #f1f3f4;
+  border: 1px solid transparent;
+  width: 50%;
+  margin: 0 auto;
+  border-radius: 6px;
+  cursor: pointer;
+  padding: 10px 20px;
+  outline: 0;
+  transition: 0.3s;
+}
+
+.navbar-home .search:hover {
+  background: #fff;
+  box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.1),
+    inset -1px -1px 1px rgba(0, 0, 0, 0.07);
+}
+
+.navbar-home .search:focus {
+  background: #fff;
+  box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.1),
+    inset -1px -1px 1px rgba(0, 0, 0, 0.07);
+}
+
+.navbar-home .user {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 4px 8px;
+  cursor: default;
+  background: rgb(0, 0, 0, 0.05);
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.navbar-home .user:hover {
+  background: rgb(0, 0, 0, 0.09);
+}
+
+.navbar-home .user .username {
+  margin-left: 5px;
+}
+
+.logout-btn {
+  width: auto;
+  background-color: #dc3545;
+  transition: 0.3s;
+  font-weight: bold;
+}
+
+.logout-btn:hover {
+  background-color: #e90016;
+}
+
+.docContainer {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  cursor: pointer;
+  border-radius: 6px;
+  margin: 6px 4px;
+  color: #444;
+  padding: 4px 8px;
+  box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.1);
+}
+
+.docContainer .info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: rgb(128, 134, 139);
+  font-size: 12px;
+  letter-spacing: 0.3px;
+  line-height: 24px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.docContainer .info .isCollab span {
+  margin-left: 0.5em;
+}
+
+.context-menu-home {
+  position: fixed;
+  background: white;
+  border: 1px solid rgb(68 68 68 / 13%);
+  border-radius: 6px;
+  padding: 5px 10px;
+}
+
+.context-menu-home * {
+  color: #919191;
+}
+
+.context-menu-home *:hover {
+  cursor: pointer;
+  color: black;
+}
+
+.dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.dialog input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.dialog button {
+  padding: 10px 20px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.dialog button:hover {
+  background-color: #0056b3;
+}
+
+.dialog button:last-child {
+  background-color: #dc3545;
+}
+
+.dialog button:last-child:hover {
+  background-color: #bd2130;
+}
+
+.toast {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.toast button {
+  background-color: #00000029;
+  border: none;
+  color: white;
+  cursor: pointer;
+  width: fit-content;
+  float: right;
+  font-size: 16px;
+}
+
+.toast button:hover {
+  color: #f8f9fa;
+}
+
+.addNewDoc {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #007bff;
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 24px;
+  line-height: 50px; /* Added line height to center the text vertically */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.addNewDoc:hover {
+  background-color: #0056b3;
+}
+
+.selfDocs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 20px;
+}

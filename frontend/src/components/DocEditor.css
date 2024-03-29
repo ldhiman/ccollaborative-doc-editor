@@ -1,0 +1,104 @@
+.main-editor {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  height: 100vh;
+  overflow: hidden;
+  width: 100vw;
+}
+
+.aside-editor {
+  width: 12%;
+  background: #000;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 1px;
+  box-shadow: inset 0px 0px 1px 1px #212020;
+}
+
+.aside-editor .logo {
+  width: -webkit-fill-available;
+  object-fit: fill;
+  padding: 5px 20px;
+}
+
+.aside-editor .user-area {
+  display: flex;
+  color: white;
+  flex-direction: column;
+  width: 100%;
+  justify-content: flex-start;
+  margin: 10px 0px;
+  flex-grow: 1;
+}
+
+.aside-editor .user-area .userHolder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  align-items: center;
+  width: 80%;
+  margin: 3px 0px;
+  box-shadow: inset 0px 0px 0px 1px rgb(238 238 238 / 20%);
+  border-radius: 8px;
+  padding: 4px 6px;
+  background-color: #010101;
+}
+
+.aside-editor .user-area .userHolder .username {
+  width: 80%;
+  justify-content: center;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.aside-editor .controls button {
+  width: 100%;
+  margin: 2px 0px;
+  padding: 8px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.aside-editor .controls button:hover {
+  box-shadow: inset 0px 0px 0px 1px #eee;
+  cursor: pointer;
+}
+
+.aside-editor .controls .invite {
+  background-color: #4d7ed5;
+}
+
+.editorWrap-editor {
+  width: 90%;
+  background: #11121a;
+  color: white;
+  outline: 0;
+  border: 0;
+  resize: none;
+}
+
+.editorWrap-editor::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+.editorWrap-editor::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+.editorWrap-editor::-webkit-scrollbar-thumb {
+  background: #555; /* Color of the scroll thumb */
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Handle on hover */
+.editorWrap-editor::-webkit-scrollbar-thumb:hover {
+  background: #444; /* Color of the scroll thumb on hover */
+}
