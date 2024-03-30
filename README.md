@@ -19,7 +19,7 @@ Collaborative Document Editor is a web-based application that allows multiple us
 - Frontend:
   - HTML5
   - CSS3
-  - JavaScript (Vue.js or React)
+  - JavaScript (React.js)
   - WebSocket (Socket.io)
 
 - Backend:
