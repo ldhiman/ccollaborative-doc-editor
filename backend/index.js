@@ -16,7 +16,7 @@ const app = express();
 app.use(
   cors({
     credentials: true,
-    origin: "https://ccollaborative-doc-editor.vercel.app",
+    origin: process.env.BASE_URL,
   })
 );
 
@@ -28,18 +28,19 @@ app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 const PORT = process.env.PORT || 3000;
+const S_PORT = process.env.S_PORT || 3002;
 
 app.listen(PORT, () => {
   console.log("Server is running on port " + PORT);
 });
 
 mongoose
-  .connect(`mongodb+srv://ldhiman597:FGTyeCs4DdE2kXxu@cluster0.vlsezux.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`, { dbName: "auth" })
+  .connect(`${process.env.DATABASE_URL}`, { dbName: "auth" })
   .then(() => {
     console.log("Connected to MongoDB");
     const server = http.createServer(app);
-    server.listen(3002, () => {
-      console.log("Socket Server is running on port 3002");
+    server.listen(S_PORT, () => {
+      console.log("Socket Server is running on port " + S_PORT);
     });
 
     const io = socketIo(server, {
