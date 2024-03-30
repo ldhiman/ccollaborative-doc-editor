@@ -11,7 +11,7 @@ const PasswordReset = () => {
     e.preventDefault();
     setMessage("Reseting Password....");
     axios
-      .post("https://ccollaborative-doc-editor-api.vercel.app/auth/resetPassword", {
+      .post("http://localhost:3000/auth/resetPassword", {
         token,
         newPassword: e.target[0].value,
       })
