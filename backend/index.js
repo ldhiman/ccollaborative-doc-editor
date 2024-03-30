@@ -191,30 +191,6 @@ app.get("/v1", (req, res) => {
   }
 });
 
-app.get("/v1/user", authenticateToken, Verify, (req, res) => {
-  res.status(200).json({
-    status: "success",
-    message: "Welcome to your Dashboard!",
-  });
-});
-
-app.get("/v1/admin", authenticateToken, Verify, VerifyRole, (req, res) => {
-  res.status(200).json({
-    status: "success",
-    message: "Welcome to the Admin portal!",
-  });
-});
-
-app.put("/v1/user/update", authenticateToken, Verify, async (req, res) => {
-  try {
-    const { userInfo } = req.body;
-    const response = await updateUser(req.userId, userInfo);
-    res.status(200).json(response);
-  } catch (err) {
-    console.error(err);
-    res.status(500).json({ error: err.message });
-  }
-});
 
 app.use((err, req, res, next) => {
   const statusCode = err.statusCode || 500;
